@@ -1,0 +1,80 @@
+#newsletter{
+    background-color: #E8ECFF4D;
+    padding: 75px 0;
+    margin-top: 176px;
+
+    .newsletter_section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2{
+        color: #058AFF;
+        font-size: 31.25px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    p{
+        color: #000;
+        font-size: 20px;
+        font-weight: 500;
+        opacity: 0.7;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    form{
+        border-radius: 10px;
+        border: 1px solid #058aff28;
+        padding: 15px 25px;
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        width: 487px;
+        justify-content: space-between;
+
+        @media (max-width: 540px) {
+            width: 100%;
+        }
+    }
+
+    .input{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    label{
+        display: inline-block;
+        width: 34px;
+        height: 28px;
+        background-image: url(../svg/newsletter.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    #email{
+        outline: none;
+        border: none;
+        width: 230px;
+        background-color: transparent;
+
+        @media (max-width: 540px) {
+            width: 60%;
+        }
+
+        &::placeholder{
+            color: #000;
+            font-size: 20px;
+            font-weight: 400;
+            opacity: 0.6;
+        }
+    }
+
+    .btn{
+        width: 102px;
+    }
+}

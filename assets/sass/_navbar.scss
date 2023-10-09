@@ -1,0 +1,111 @@
+header{
+    margin-top: 27px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #0284f525;
+
+    .navbar_section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo_img{
+
+        @media (max-width: 834px) {
+            position: relative;
+            z-index: 5;
+            top: 0px;
+        }
+
+    }
+
+    .navbar_menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70%;
+
+        @media (max-width: 1000px) {
+            width: 80%;
+        }
+        @media (max-width: 834px) {
+            background-color: #fff;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 40px;
+            transform: translateX(100%);
+            transition: all .6s ease-in-out;
+            z-index: 4;
+        }
+    }
+
+    label{
+        display: none;
+        cursor: pointer;
+        @media (max-width: 834px) {
+            display: block;
+        }
+
+    }
+
+    #check{
+        display: none;
+
+        &:checked ~ .navbar_menu{
+            transform: translate(0);
+        }
+    }
+
+    .delete{
+        position: fixed;
+        right: 70px;
+        top: 50px;
+    }
+
+    ul{
+        display: flex;
+        gap: 40px;
+
+        @media (max-width: 834px) {
+            flex-direction: column;
+        }
+
+        a{
+            color: #000;
+            font-size: 20px;
+            font-weight: 400;
+            position: relative;
+
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: -36px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #0082F4;
+                display: none;
+
+                @media (max-width: 834px) {
+                    bottom: -15px;
+                }
+            }
+
+            &:hover{
+                color: #0082F4;
+                transition: all .6;
+
+                &::after{
+                    display: inline-block;
+                    transition: all .6 ease-in-out;
+                }
+            }
+
+        }
+    }
+}
